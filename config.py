@@ -1,5 +1,6 @@
 # config.py
 
+
 # Time durations in seconds
 WORK_DURATION = 25 * 60
 SHORT_BREAK_DURATION = 5 * 60
