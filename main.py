@@ -1,7 +1,6 @@
 # main.py
 import tkinter as tk
 from tkinter import messagebox
-
 from timer import Timer
 from config import WORK_DURATION, SHORT_BREAK_DURATION, LONG_BREAK_DURATION, SESSIONS_BEFORE_LONG_BREAK
 from stats import Stats
