@@ -2,6 +2,7 @@
 import time
 import threading
 
+
 class Timer:
     def __init__(self, work_time=25*60, short_break_time=5*60, long_break_time=15*60):
         self.work_time = work_time
