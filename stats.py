@@ -1,6 +1,7 @@
 # stats.py
 import json
 
+
 class Stats:
     def __init__(self, stats_file="stats.json"):
         self.stats_file = stats_file
