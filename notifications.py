@@ -1,6 +1,7 @@
 # notifications.py
 from plyer import notification
 
+
 def notify_timer_start():
     notification.notify(
         title="Focus Timer",
