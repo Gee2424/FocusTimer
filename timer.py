@@ -1,10 +1,8 @@
-# timer.py
 import time
 import threading
 
-
 class Timer:
-    def __init__(self, work_time=25*60, short_break_time=5*60, long_break_time=15*60):
+    def __init__(self, work_time=25 * 60, short_break_time=5 * 60, long_break_time=15 * 60):
         self.work_time = work_time
         self.short_break_time = short_break_time
         self.long_break_time = long_break_time
@@ -34,3 +32,23 @@ class Timer:
             self.current_time -= 1
         if self.is_running and self.on_timer_finished:
             self.on_timer_finished()
+
+# Usage example
+if __name__ == "__main__":
+    def on_start():
+        print("Timer started!")
+
+    def on_stop():
+        print("Timer stopped!")
+
+    def on_finish():
+        print("Timer finished!")
+
+    timer = Timer()
+    timer.on_timer_start = on_start
+    timer.on_timer_stop = on_stop
+    timer.on_timer_finished = on_finish
+
+    timer.start()
+    time.sleep(10)  # Simulate the timer running for 10 seconds
+    timer.stop()
