@@ -9,7 +9,7 @@ The Pomodoro Focus Timer is a productivity application based on the Pomodoro Tec
 - Auditory and visual notifications for the end of a work interval or break.
 - Statistics and progress tracking to monitor productivity over time.
 - (Any other features your application provides)
-
+***
 ## Getting Started
 
 ### Prerequisites
