@@ -1,5 +1,3 @@
-# ui.py
-
 import tkinter as tk
 from timer import Timer
 from config import WORK_DURATION, SHORT_BREAK_DURATION, LONG_BREAK_DURATION, SESSIONS_BEFORE_LONG_BREAK
@@ -12,16 +10,16 @@ class FocusTimerApp:
         self.window = tk.Tk()
         self.window.title("Focus Timer")
 
-        self.timer_label = tk.Label(self.window, text="")
+        self.timer_label = tk.Label(self.window, text="", font=("Helvetica", 48))
         self.timer_label.pack()
 
-        self.stats_label = tk.Label(self.window, text="")
+        self.stats_label = tk.Label(self.window, text="", font=("Helvetica", 14))
         self.stats_label.pack()
 
-        self.start_button = tk.Button(self.window, text="Start", command=self.start_timer)
+        self.start_button = tk.Button(self.window, text="Start", command=self.start_timer, font=("Helvetica", 14))
         self.start_button.pack()
 
-        self.stop_button = tk.Button(self.window, text="Stop", command=self.stop_timer)
+        self.stop_button = tk.Button(self.window, text="Stop", command=self.stop_timer, font=("Helvetica", 14))
         self.stop_button.pack()
 
         self.timer.on_timer_start = self.on_timer_start
@@ -53,8 +51,15 @@ class FocusTimerApp:
 
     def update_stats_label(self):
         stats = self.stats.get_stats()
-        self.stats_label.config(text=f"Work Sessions: {stats['work_sessions']}, Short Breaks: {stats['short_breaks']}, Long Breaks: {stats['long_breaks']}")
+        stats_text = f"Work Sessions: {stats['work_sessions']}, Short Breaks: {stats['short_breaks']}, Long Breaks: {stats['long_breaks']}"
+        self.stats_label.config(text=stats_text)
         self.window.after(60000, self.update_stats_label)  # Update the stats label every minute
 
     def run(self):
         self.window.mainloop()
+        
+if __name__ == "__main__":
+    timer = Timer(WORK_DURATION, SHORT_BREAK_DURATION, LONG_BREAK_DURATION, SESSIONS_BEFORE_LONG_BREAK)
+    stats = Stats()  # Make sure to initialize the Stats class
+    app = FocusTimerApp(timer, stats)
+    app.run()
