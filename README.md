@@ -1,7 +1,7 @@
 # Pomodoro Focus Timer
 
 The Pomodoro Focus Timer is a productivity application based on the Pomodoro Technique developed by Francesco Cirillo. The application helps users manage their time more effectively by breaking their work into focused time intervals (typically 25 minutes), separated by short breaks (typically 5 minutes). After a set number of work intervals, the user is prompted to take a longer break.
-
+***
 ## Features
 
 - Customize length of work intervals and short and long breaks.
