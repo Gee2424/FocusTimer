@@ -22,7 +22,7 @@ The Pomodoro Focus Timer is a productivity application based on the Pomodoro Tec
 1. Clone this repository: `git clone https://github.com/Gee2424/FocusTimer.git`
 2. Run `main.py` to start the application.
 
-
+***
 
 ## Contributing
 
