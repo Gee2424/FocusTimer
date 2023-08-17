@@ -27,7 +27,7 @@ The Pomodoro Focus Timer is a productivity application based on the Pomodoro Tec
 ## Contributing
 
 If you want to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
-
+***
 
 ## Contact
 
